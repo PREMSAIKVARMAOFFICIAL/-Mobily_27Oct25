@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Mobily_27Oct25App: App {
+    private var container = AppContainer.live
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
+            .environmentObject(container)
+            .preferredColorScheme(.dark)
         }
     }
 }
